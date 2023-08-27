@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Navbar from './Pages/Navbar/Navbar';
 import Shop from './Pages/Shop/Shop';
-import SignIn from './components/SignIn/SignIn';
+import Authentication from './components/Authentication/Authentication';
 
 function App () {
   return (
@@ -12,7 +12,7 @@ function App () {
         <Route path='/' element={<Navbar />}>
           <Route index element={<Home />} />
           <Route path='shop' element={<Shop />} />
-          <Route path='signIn' element={<SignIn />} />
+          <Route path='auth' element={<Authentication />} />
         </Route>
       </Routes>
     </>
