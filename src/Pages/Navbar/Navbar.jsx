@@ -5,10 +5,13 @@ import './Navbar.scss'
 import { UserContext } from '../../contexts/userContext';
 import { signOutUser } from '../../Utility/Firebase/firebase.init';
 import CartIcon from '../../components/CartIcon/CartIcon';
+import CartDropDown from '../../components/CartDropDown/CartDropDown';
+import { CartContext } from '../../contexts/cartContext';
 
 const Navbar = () => {
 
     const { currentUser } = useContext(UserContext);
+    const { isCartOpen } = useContext(CartContext);
 
     return (
         <Fragment>
@@ -29,6 +32,7 @@ const Navbar = () => {
                         <CartIcon />
                     </div>
                 </div>
+                {isCartOpen && <CartDropDown />}
             </div>
             <Outlet />
         </Fragment>
