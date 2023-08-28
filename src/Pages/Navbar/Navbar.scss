@@ -1,28 +1,44 @@
-// Navbar.scss
 .navigation {
   height: 70px;
   width: 100%;
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
 }
 
 .logo-container {
-  display: flex; /* Use flex to align logo and text */
-  align-items: center; /* Align items vertically */
-  margin-right: 20px; /* Adjust the margin as needed */
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .logo {
-  width: 50px; /* Adjust the width as needed */
+  width: 50px;
   height: auto;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* This pushes the CartIcon to the right */
 }
 
 .nav-link {
   text-decoration: none;
-  color: black; /* Adjust the color as needed */
+  color: black;
   font-weight: bold;
   font-size: 16px;
   margin-left: 10px;
+  cursor: pointer;
 }
