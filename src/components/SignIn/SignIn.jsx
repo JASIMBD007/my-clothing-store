@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword, signInWithGooglePopup } from '../../Utility/Firebase/firebase.init';
 import FormInput from '../FormInput/FormInput';
 import './SignIn.scss';
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 
 const defaultFormFields = {
     email: '',
@@ -72,8 +72,8 @@ const SignIn = () => {
                     value={password} />
 
                 <div className='buttons-container'>
-                    <Buttons type='submit'>Sign In</Buttons>
-                    <Buttons type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Buttons>
+                    <Button type='submit'>Sign In</Button>
+                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
                 </div>
             </form>
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from '../../Utility/Firebase/firebase.init';
 import FormInput from '../FormInput/FormInput';
 import './SignUp.scss';
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 
 
 const defaultFormFields = {
@@ -85,7 +85,7 @@ const SignUp = () => {
                     onChange={handleOnChange} name='confirmPassword'
                     value={confirmPassword} />
 
-                <Buttons type='submit'>Sign Up</Buttons>
+                <Button type='submit'>Sign Up</Button>
             </form>
         </div>
     )

@@ -20,23 +20,26 @@ const Navbar = () => {
                     <img src={crown} className="logo" alt="logo" />
                 </Link>
                 <div className='nav-links-container'>
-                    <div className='nav-links-left'>
-                        <Link className='nav-link' to="/shop">SHOP</Link>
-                        {currentUser ? (
-                            <span className='nav-link' onClick={signOutUser}>SIGN OUT</span>
-                        ) : (
-                            <Link className='nav-link' to="/auth">SIGN IN</Link>
-                        )}
-                    </div>
-                    <div className='nav-links-right'>
-                        <CartIcon />
-                    </div>
+                    <Link className='nav-link' to='/shop'>
+                        SHOP
+                    </Link>
+
+                    {currentUser ? (
+                        <span className='nav-link' onClick={signOutUser}>
+                            SIGN OUT
+                        </span>
+                    ) : (
+                        <Link className='nav-link' to='/auth'>
+                            SIGN IN
+                        </Link>
+                    )}
+                    <CartIcon />
                 </div>
                 {isCartOpen && <CartDropDown />}
             </div>
             <Outlet />
         </Fragment>
-    )
-}
+    );
+};
 
 export default Navbar;

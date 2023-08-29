@@ -1,15 +1,18 @@
-import React from 'react'
-import './CartDropDown.scss'
-import Buttons from '../Buttons/Buttons'
+import React from 'react';
+import './CartDropDown.scss';
+import Button from '../Button/Button';
 
 const CartDropDown = () => {
     return (
         <div className='cart-dropdown-container'>
             <div className='cart-items'>
-                <Buttons>GO TO CHECKOUT</Buttons>
+                {/* Your cart items content */}
+            </div>
+            <div className='checkout-button-container'>
+                <Button>GO TO CHECKOUT</Button>
             </div>
         </div>
-    )
+    );
 }
 
-export default CartDropDown
+export default CartDropDown;
